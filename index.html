@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Calculator app</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main id="mainId" class="themeOneMain">
+        <div class="box">
+            <div class="title">
+                <h1 id="calcTitle" class="calcThemeOne">calc</h1>
+                <span id="themeTitle" class="themeClass themeColorOne">THEME</span>
+                <div class="themeWrapper">
+                    <span id="themeNumbersId"class="themeNumbers themeNumbersOne">1 2 3</span>
+                    <input type="range" name="themeSlider" min="1" max="3" form="formButtons" class="themeInput themeInputOne">
+                </div>
+            </div>
+            <div>
+                <input type="text" name="numberField" form="formButtons" class="inputNumbers inputNumbersOne">
+            </div>
+            <form id="formButtons" class="boxColorOne">
+                <div class="buttonsWrapper">
+                    <button type="button" name="7button" value="7" class="buttonColorOne">7</button>
+                    <button type="button" name="8button" value="8" class="buttonColorOne">8</button>
+                    <button type="button" name="9button" value="9" class="buttonColorOne">9</button>
+                    <button type="button" name="delButton" class="buttonColorOne buttonDelOne">DEL</button>
+                </div>
+                <div class="buttonsWrapper">
+                    <button type="button" name="4button" value="4" class="buttonColorOne">4</button>
+                    <button type="button" name="5button" value="5" class="buttonColorOne">5</button>
+                    <button type="button" name="6button" value="6" class="buttonColorOne">6</button>
+                    <button type="button" name="plusButton" class="buttonColorOne">+</button>
+                </div>
+                <div class="buttonsWrapper">
+                    <button type="button" name="1button" value="1" class="buttonColorOne">1</button>
+                    <button type="button" name="2button" value="2" class="buttonColorOne">2</button>
+                    <button type="button" name="3button" value="3" class="buttonColorOne">3</button>
+                    <button type="button" name="minusButton" class="buttonColorOne">-</button>
+                </div>
+                <div class="buttonsWrapper">
+                    <button type="button" name="dotButton" class="buttonColorOne">.</button>
+                    <button type="button" name="0button" value="0" class="buttonColorOne">0</button>
+                    <button type="button" name="divButton" class="buttonColorOne">/</button>
+                    <button type="button" name="mulButton" class="buttonColorOne">X</button>
+                </div>
+                <div class="buttonsWrapper">
+                    <button type="button" name="resetButton" class="resetButtonC buttonResetOne">RESET</button>
+                    <button type="button" name="resultButton" class="resultButtonC buttonResultOne">=</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+  
+    <footer>
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="themeOneFooter" id="footerLink">Frontend Mentor</a><br>
+        Coded by <a href="https://tailshu3hu3.github.io" target="_blank">TailsHu3Hu3</a>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

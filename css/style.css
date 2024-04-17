@@ -1,0 +1,598 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+}
+
+:root {
+    /*Theme 1*/
+    --main-background-t1: hsl(222, 26%, 31%);
+    --keypad-background-t1: hsl(223, 31%, 20%);
+    --input-background-t1: hsl(224, 36%, 15%);
+    /*********/
+    --key-input-background-t1: hsl(30, 25%, 89%);
+    --key-input-shadow-t1: hsl(28, 16%, 65%);
+    --key-background-special-t1: hsl(225, 21%, 49%);
+    --key-shadow-special-t1: hsl(224, 28%, 35%);
+    --key-background-toggle-special-t1: hsl(224, 51%, 76%);
+    --key-result-t1: hsl(6, 63%, 50%);
+    --key-result-shadow-t1: hsl(6, 70%, 34%);
+    --key-result-toggle-t1: hsl(7, 91%, 66%);
+    /*********/
+    --text-t1: hsl(0, 0%, 100%);
+    --text-toggle-t1: hsl(221, 14%, 31%);
+
+    /*Theme 2*/
+    --main-background-t2: hsl(0, 0%, 90%);
+    --keypad-background-t2: hsl(0, 5%, 81%);
+    --input-background-t2: hsl(0, 0%, 93%);
+    /*********/
+    --key-input-background-t2: hsl(45, 7%, 89%);
+    --key-input-shadow-t2: hsl(35, 11%, 61%);
+    --key-input-background-special-t2: hsl(185, 42%, 37%);
+    --key-input-shadow-special-t2: hsl(185, 58%, 25%);
+    --key-input-background-toggle-special-t2: hsl(185, 40%, 56%);
+    --key-result-t2: hsl(25, 98%, 40%);
+    --key-result-shadow-t2: hsl(25, 99%, 27%);
+    --key-result-toggle-t2: hsl(25, 100%, 61%);
+    /*********/
+    --text-t2: hsl(60, 10%, 19%);
+    --text-toggle-t2: hsl(0, 0%, 100%);
+
+    /*Theme 3*/
+    --main-background-t3: hsl(268, 75%, 9%);
+    --keypad-background-t3: hsl(268, 71%, 12%);
+    /*********/
+    --key-input-background-t3: hsl(268, 47%, 21%);
+    --key-input-shadow-t3: hsl(290, 70%, 36%);
+    --key-input-background-special-t3: hsl(281, 89%, 26%);
+    --key-input-shadow-special-t3: hsl(285, 91%, 52%);
+    --key-result-t3: hsl(176, 100%, 44%);
+    --key-result-shadow-t3: hsl(177, 92%, 70%);
+    /*********/
+    --text-t3: hsl(52, 100%, 62%);
+    --text-toggle-t3: hsl(198, 20%, 13%);
+    --text-reset-t3: hsl(0, 0%, 100%);
+}
+
+main {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.box {
+    width: 400px;
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.title {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.themeWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 32px;
+    display: inline-block;
+}
+
+.themeClass {
+    font-size: 12px;
+    margin-left: 200px;
+    letter-spacing: 2px;
+}
+
+.themeNumbers {
+    display: block;
+    letter-spacing: 5px;
+    margin-left: 4px;
+    width: 100%;
+    text-align: center;
+}
+
+/******************
+*      Track      *
+*        v        *
+*******************/
+
+.themeInput {
+    -webkit-appearance: none;
+    width: 70px;
+    background: transparent;
+}
+
+.themeInput::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 20px;
+    padding: 10px 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+}
+
+.themeInput::-moz-range-track {
+    width: 100%;
+    height: 20px;
+    padding: 10px 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+}
+
+.themeInput::-ms-track {
+    width: 100%;
+    height: 20px;
+    padding: 10px 5px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+.themeInput::-ms-fill-lower {
+    border-radius: 10px;
+    border: none;
+}
+
+.themeInput::-ms-fill-upper {
+    border-radius: 10px;
+    border: none;
+}
+/******************
+*        ^        *
+*      Track      *
+*      Slider     *
+*        v        *
+******************/
+
+.themeInput::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -7.25px;
+}
+
+.themeInput::-moz-range-thumb {
+    border: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.themeInput::-ms-thumb {
+    border: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.themeInput:focus {
+    outline: none;
+}
+
+.themeInput::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+/*********************
+*         ^          *   
+*       Slider       *
+*********************/
+
+
+.inputNumbers {
+    width: 100%;
+    height: 80px;
+    margin: 20px 0;
+    text-align: right;
+    padding-right: 20px;
+    font-size: 32px;
+    outline: none;
+    border-style: none;
+    border-radius: 10px;
+}
+
+#formButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 400px;
+    padding: 10px 20px;
+    outline: none;
+    border-style: none;
+    border-radius: 10px;
+}
+
+.buttonsWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    width: 21%;
+    height: 50px;
+    font-size: 32px;
+    outline: none;
+    border-style: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.resetButtonC, .resultButtonC {
+    width: 170px;
+    font-size: 25px;
+}
+
+/***************
+*    THEMES    *
+***************/
+
+.themeOneMain {
+    background-color: var(--main-background-t1);
+}
+.calcThemeOne, .themeColorOne, .themeNumbersOne  {
+    color: var(--text-t1);
+}
+.inputNumbersOne {
+    background-color: var(--input-background-t1);
+    color: var(--text-t1);
+}
+
+
+
+/*********************
+*   Track - Theme 1  *
+*********************/
+
+.themeInputOne::-webkit-slider-runnable-track {
+    background-color: var(--keypad-background-t1);
+}
+.themeInputOne::-moz-range-track {
+    background-color: var(--keypad-background-t1);
+}
+.themeInputOne::-ms-fill-lower {
+    background-color: var(--keypad-background-t1);
+}
+.themeInputOne::-ms-fill-upper {
+    background-color: var(--keypad-background-t1);
+}
+/******/
+.themeInputOne::-webkit-slider-thumb {
+    background-color: var(--key-result-t1);
+}
+.themeInputOne::-moz-range-thumb {
+    background-color: var(--key-result-t1);
+} 
+.themeInputOne::-ms-thumb {
+    background-color: var(--key-result-t1);
+} 
+
+/********/
+
+.boxColorOne {
+    background-color: var(--keypad-background-t1);
+}
+
+.buttonColorOne {
+    background-color: var(--key-input-background-t1);
+    color: var(--text-toggle-t1);
+    box-shadow: 0 3px 0 var(--key-input-shadow-t1);
+}
+
+.buttonResetOne, .buttonDelOne {
+    background-color: var(--key-background-special-t1);
+    color: var(--text-t1);
+    box-shadow: 0 3px 0 var(--key-shadow-special-t1);
+    font-size: 20px;
+}
+.buttonResultOne {
+    background-color: var(--key-result-t1);
+    box-shadow: 0 3px 0 var(--key-result-shadow-t1);
+}
+
+
+/***************
+*    THEME 2   *
+****************/
+
+.themeTwoMain {
+    background-color: var(--main-background-t2);
+}
+.calcThemeTwo, .themeColorTwo, .themeNumbersTwo  {
+    color: var(--text-t2);
+}
+.inputNumbersTwo {
+    background-color: var(--input-background-t2);
+    color: var(--text-t2);
+}
+
+
+
+/*********************
+*   Track - Theme 2  *
+*********************/
+
+.themeInputTwo::-webkit-slider-runnable-track {
+    background-color: var(--keypad-background-t2);
+}
+.themeInputTwo::-moz-range-track {
+    background-color: var(--keypad-background-t2);
+}
+.themeInputTwo::-ms-fill-lower {
+    background-color: var(--keypad-background-t2);
+}
+.themeInputTwo::-ms-fill-upper {
+    background-color: var(--keypad-background-t2);
+}
+/******/
+.themeInputTwo::-webkit-slider-thumb {
+    background-color: var(--key-result-t2);
+}
+.themeInputTwo::-moz-range-thumb {
+    background-color: var(--key-result-t2);
+} 
+.themeInputTwo::-ms-thumb {
+    background-color: var(--key-result-t2);
+} 
+
+/********/
+
+.boxColorTwo {
+    background-color: var(--keypad-background-t2);
+}
+
+.buttonColorTwo {
+    background-color: var(--key-input-background-t2);
+    color: var(--text-t2);
+    box-shadow: 0 3px 0 var(--key-input-shadow-t2);
+}
+
+.buttonResetTwo, .buttonDelTwo {
+    background-color: var(--key-input-background-special-t2);
+    color: var(--text-t1);
+    box-shadow: 0 3px 0 var(--key-input-shadow-special-t2);
+    font-size: 20px;
+}
+.buttonResultTwo {
+    background-color: var(--key-result-t2);
+    box-shadow: 0 3px 0 var(--key-result-shadow-t2);
+}
+
+/***************
+*    THEME 3   *
+****************/
+
+.themeThreeMain {
+    background-color: var(--main-background-t3);
+}
+.calcThemeThree, .themeColorThree, .themeNumbersThree  {
+    color: var(--text-t3);
+}
+.inputNumbersThree {
+    background-color: var(--key-input-background-t3);
+    color: var(--text-t3);
+}
+
+
+
+/*********************
+*   Track - Theme 3  *
+*********************/
+
+.themeInputThree::-webkit-slider-runnable-track {
+    background-color: var(--keypad-background-t3);
+}
+.themeInputThree::-moz-range-track {
+    background-color: var(--keypad-background-t3);
+}
+.themeInputThree::-ms-fill-lower {
+    background-color: var(--keypad-background-t3);
+}
+.themeInputThree::-ms-fill-upper {
+    background-color: var(--keypad-background-t3);
+}
+/******/
+.themeInputThree::-webkit-slider-thumb {
+    background-color: var(--key-result-t3);
+}
+.themeInputThree::-moz-range-thumb {
+    background-color: var(--key-result-t3);
+} 
+.themeInputThree::-ms-thumb {
+    background-color: var(--key-result-t3);
+} 
+
+/********/
+
+.boxColorThree {
+    background-color: var(--keypad-background-t3);
+}
+
+.buttonColorThree {
+    background-color: var(--key-input-background-t3);
+    color: var(--text-t3);
+    box-shadow: 0 3px 0 var(--key-input-shadow-t3);
+}
+
+.buttonResetThree, .buttonDelThree {
+    background-color: var(--key-input-background-special-t3);
+    color: var(--text-reset-t3);
+    box-shadow: 0 3px 0 var(--key-input-shadow-special-t3);
+    font-size: 20px;
+}
+.buttonResultThree {
+    background-color: var(--key-result-t3);
+    box-shadow: 0 3px 0 var(--key-result-shadow-t3);
+}
+
+/***************
+*    FOOTER    *
+***************/
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.themeOneFooter {
+    color: var(--key-result-t1);
+}
+.themeTwoFooter{
+    color: var(--key-result-t2); 
+}
+.themeThreeFooter {
+    color: var(--key-result-t3);
+}
+
+a:last-of-type {
+    color: #3c065e;
+}
+
+
+/***************
+*    HOVERS    *
+***************/
+
+.buttonColorOne:hover {
+    background-color: var(--text-t1);
+    transition-duration: 200ms;
+}
+
+.buttonDelOne:hover, .buttonResetOne:hover {
+    background-color: var(--key-background-toggle-special-t1);
+    transition-duration: 200ms;
+}
+
+.buttonResultOne:hover {
+    background-color: var(--key-result-toggle-t1);
+    transition-duration: 200ms;
+}
+
+/***********/
+
+.buttonColorTwo:hover {
+    background-color:  var(--text-toggle-t2);
+    transition-duration: 200ms;
+}
+
+.buttonResetTwo:hover, .buttonDelTwo:hover {
+    background-color: var(--key-input-background-toggle-special-t2);
+    transition-duration: 200ms;
+}
+
+.buttonResultTwo:hover {
+    background-color: var(--key-result-toggle-t2);
+    transition-duration: 200ms;
+}
+
+/***********/
+
+.buttonColorThree:hover {
+    background-color: var(--key-input-background-special-t3);
+    transition-duration: 200ms;
+}
+
+.buttonResetThree:hover, .buttonDelThree:hover {
+    background-color: var(--key-input-shadow-special-t3);
+    box-shadow: 0 3px 0 var(--key-input-background-special-t3);
+    transition-duration: 200ms;
+}
+
+.buttonResultThree:hover {
+    background-color: var(--key-result-shadow-t3);
+    box-shadow: 0 3px 0 var(--key-result-t3);
+    transition-duration: 200ms;
+}
+
+.themeOneFooter:hover  {
+    color: var(--key-result-toggle-t1);
+    transition-duration: 400ms;
+}
+.themeTwoFooter:hover {
+    color: var(--key-result-toggle-t2); 
+    transition-duration: 400ms;
+}
+.themeThreeFooter:hover  {
+    color: var(--key-result-shadow-t3);
+    transition-duration: 400ms;
+}
+
+a:last-of-type:hover {
+    color: #7805c0;
+    transition-duration: 400ms;
+}
+
+/***************
+*     MEDIA    *
+***************/
+
+@media (max-width: 425px) {
+    .box {
+        width: 300px;
+    }
+    
+    .title {
+        width: 300px;
+    }
+    
+    h1 {
+        font-size: 25px;
+    }
+    
+    .themeClass {
+        font-size: 12px;
+        margin-left: 125px;
+    }
+    
+    button {
+        font-size: 25px;
+        height: 40px;
+    }
+    
+    .resetButtonC, .resultButtonC {
+        width: 123px;
+    }
+    
+    .inputNumbers {
+        height: 60px;
+        font-size: 22px;
+    }   
+
+    .buttonDelOne, .buttonResetOne {
+        font-size: 18px;
+    }
+
+}
