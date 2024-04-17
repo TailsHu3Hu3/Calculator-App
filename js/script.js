@@ -288,8 +288,6 @@ function dotPressed() {
         inputNumber.value = teste
         console.log(teste)
         apertado = true
-    } else {
-        console.log('oiii')
     }
 }
 
@@ -324,11 +322,7 @@ function plusPressed() {
         apertado = false
 
 
-        console.log(valorGuardado + 'valorGuardado')
-        console.log(teste + 'teste')
-        console.log(inputNumber.value + 'input')
-    } else {
-        console.log('nah id win')
+       
     }
 }
 
@@ -355,13 +349,7 @@ function minusPressed() {
         testeMulti = true
         testeDiv = true
         apertado = false
-        
-        console.log(valorGuardado + 'valorGuardado')
-        console.log(teste + 'teste')
-        console.log(inputNumber.value + 'input')
-    } else {
-        console.log('nah id win minus')
-    }
+    } 
 }
 
 function multiPressed() {
@@ -378,10 +366,7 @@ function multiPressed() {
         } else if (apertadoResult == false && operatorPressed == 'div') {
             valorGuardado = valorGuardado / parseFloat(teste)
             inputNumber.value = valorGuardado
-        }/*else {
-            valorGuardado = parseFloat(teste)
-            teste = ''
-        }*/
+        }
         teste = ''
         operatorPressed = 'multi'
         apertadoResult = false
@@ -425,15 +410,11 @@ function resultPressed() {
         inputNumber.value = valorGuardado + parseFloat(teste)
         teste = inputNumber.value
         valorGuardado = parseFloat(teste)
-    } else {
-        console.log('nonono :D')
     }
 
     if (operatorPressed == 'minus' && teste) {
         inputNumber.value = valorGuardado - parseFloat(teste)
         valorGuardado = parseFloat(inputNumber.value)
-    } else {
-        console.log('nonono :D minus')
     }
 
     if (operatorPressed == 'multi' && teste) {
@@ -496,9 +477,6 @@ formButtons.addEventListener('submit', executeCalc)
 themeSlider.addEventListener('change', changeTheme)
 
 let valorSalvoSlider = localStorage.getItem('valorDoSlider')
-
 themeSlider.value = valorSalvoSlider
 
 changeTheme()
-console.log(inputNumber)
-console.log(sevenButton)
