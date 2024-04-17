@@ -219,74 +219,62 @@ let operatorPressed = 'plus'
 
 function mudou() {
     teste = inputNumber.value
-    console.log(teste)
 }
 
 function zeroPressed() {
     teste += 0
     inputNumber.value = teste
-    console.log(teste)
 }
 
 function onePressed() {
     teste += 1
     inputNumber.value = teste
-    console.log(teste)
 }
 
 function twoPressed() {
     teste += 2
     inputNumber.value = teste
-    console.log(teste)
 }
 
 function threePressed() {
     teste += 3
     inputNumber.value = teste
-    console.log(teste)
 }
 
 function fourPressed() {
     teste += 4
     inputNumber.value = teste
-    console.log(teste)
 }
 
 function fivePressed() {
     teste += 5
     inputNumber.value = teste
-    console.log(teste)
 }
 
 function sixPressed() {
     teste += 6
     inputNumber.value = teste
-    console.log(teste)
 }
 
 function sevenPressed() {
     teste += 7
     inputNumber.value = teste
-    console.log(teste)
 }
 
 function eightPressed() {
     teste += 8
     inputNumber.value = teste
-    console.log(teste)
 }
 
 function ninePressed() {
     teste += 9
     inputNumber.value = teste
-    console.log(teste)
 }
 
 function dotPressed() {
     if (inputNumber.value && apertado == false) {
         teste += '.'    
         inputNumber.value = teste
-        console.log(teste)
         apertado = true
     }
 }
